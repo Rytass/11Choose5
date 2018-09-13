@@ -40,7 +40,14 @@ function Header() {
         key="killKeep"
         style={styles.link}
         to="/killKeep">
-        殺/出二三四碼
+        杀/出二三四码
+      </NavLink>
+      <NavLink
+        className="hover-btn"
+        key="acrossFitType"
+        style={styles.link}
+        to="/acrossFitType">
+        二码跨/二码合/三码合/四码合/型态个数
       </NavLink>
     </nav>
   );
