@@ -1,6 +1,7 @@
 // @flow
 
 import React, { PureComponent } from 'react';
+import initNumberPool from '../helper/init';
 
 const styles = {
   wrapper: {
@@ -20,6 +21,7 @@ type Props = {
 
 class MainPage extends PureComponent<Props> {
   render() {
+    console.log(initNumberPool());
     return (
       <div style={styles.wrapper}>
         Main
