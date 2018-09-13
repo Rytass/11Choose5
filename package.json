@@ -2,8 +2,9 @@
   "name": "11choose5",
   "version": "1.0.0",
   "description": "11choose5",
-  "main": "index.js",
+  "main": "./11Choose5AnyFive/main.js",
   "scripts": {
+    "start": "electron -r @babel/register .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
