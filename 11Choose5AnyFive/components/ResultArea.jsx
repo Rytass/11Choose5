@@ -12,7 +12,7 @@ const styles = {
   textAreaWrapper: {
     display: 'block',
     width: '100%',
-    height: 300,
+    height: 500,
     overflow: 'auto',
     backgroundColor: '#fff',
     border: '1px solid #d2d2d2',
