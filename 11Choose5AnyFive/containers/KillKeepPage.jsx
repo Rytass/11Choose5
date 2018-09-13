@@ -10,7 +10,6 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import initNumberPool from '../helper/init';
 import ResultSection from '../components/ResultSection';
-import { INIT_FORM_VALUE } from '../shared/initValue';
 import { MAIN_FORM } from '../shared/form';
 import { NO_RESULT } from '../shared/message';
 import { FILTER_ACTIONS } from '../shared/actions';
@@ -36,7 +35,7 @@ type Props = {
   failTo: number,
 }
 
-class MainPage extends PureComponent<Props> {
+class KillKeepPage extends PureComponent<Props> {
   static ACTIONS = FILTER_ACTIONS;
 
   state = {
@@ -56,7 +55,7 @@ class MainPage extends PureComponent<Props> {
       } = this.props;
 
       setTimeout(() => {
-        const result = MainPage.ACTIONS
+        const result = KillKeepPage.ACTIONS
           .reduce((prev, curr) => curr(prev, runningOptions), initNumberPool())
           .filter(num => (
             num.killFailedCount >= failFrom && failTo >= num.killFailedCount));
@@ -87,7 +86,7 @@ class MainPage extends PureComponent<Props> {
 
     return (
       <form style={styles.wrapper} onSubmit={handleSubmit(d => this.submit(d))}>
-        MainPage
+        KillKeepPage
         <ResultSection isRunning={!!runningOptions} />
       </form>
     );
@@ -97,7 +96,6 @@ class MainPage extends PureComponent<Props> {
 const formHook = reduxForm({
   form: MAIN_FORM,
   destroyOnUnmount: false,
-  initialValues: INIT_FORM_VALUE,
 });
 
 const reduxHook = connect(
@@ -110,4 +108,4 @@ const reduxHook = connect(
   }, dispatch),
 );
 
-export default formHook(reduxHook(MainPage));
+export default formHook(reduxHook(KillKeepPage));
