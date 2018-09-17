@@ -10,6 +10,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import initNumberPool from '../helper/init';
 import KillSumSection from '../components/KillSumSection';
+import AcrossTailAllSection from '../components/AcrossTailAllSection';
 import ResultSection from '../components/ResultSection';
 import { INIT_FORM_VALUE } from '../shared/initValue';
 import { MAIN_FORM } from '../shared/form';
@@ -99,6 +100,7 @@ class MainPage extends PureComponent<Props> {
       <form style={styles.wrapper} onSubmit={handleSubmit(d => this.submit(d))}>
         <div style={styles.mian}>
           <KillSumSection />
+          <AcrossTailAllSection />
         </div>
         <ResultSection isRunning={!!runningOptions} />
       </form>
