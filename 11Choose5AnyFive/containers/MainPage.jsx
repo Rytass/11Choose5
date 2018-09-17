@@ -20,6 +20,7 @@ const selector = formValueSelector(MAIN_FORM);
 
 const styles = {
   wrapper: {
+    height: 700,
     padding: 8,
     width: '100%',
     display: 'flex',
@@ -27,6 +28,14 @@ const styles = {
     alignItems: 'flex-start',
     justifyContent: 'flex-start',
     position: 'relative',
+  },
+  mian: {
+    flex: 1,
+    // alignSelf: 'stretch',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'flex-start',
+    justifyContent: 'space-between',
   },
 };
 
@@ -88,7 +97,9 @@ class MainPage extends PureComponent<Props> {
 
     return (
       <form style={styles.wrapper} onSubmit={handleSubmit(d => this.submit(d))}>
-        <KillSumSection />
+        <div style={styles.mian}>
+          <KillSumSection />
+        </div>
         <ResultSection isRunning={!!runningOptions} />
       </form>
     );
