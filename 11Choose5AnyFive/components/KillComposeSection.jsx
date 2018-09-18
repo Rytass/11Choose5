@@ -10,6 +10,7 @@ import {
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { MAIN_FORM } from '../shared/form';
+import ComposeButtonSet from './Elements/ComposeButtonSet';
 import TextArea from './Form/TextArea.jsx';
 
 const styles = {
@@ -78,6 +79,7 @@ class KillComposeSection extends PureComponent<Props> {
           name="killCompose"
           component={TextArea} />
         <div style={styles.btnWrapper}>
+          <ComposeButtonSet />
           <div>
             <button
               type="button"
