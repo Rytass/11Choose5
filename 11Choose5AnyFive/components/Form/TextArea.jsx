@@ -63,7 +63,10 @@ class TextArea extends PureComponent {
     } = this.props;
 
     return (
-      <div style={styles.wrapper} ref={this.scrollContainer}>
+      <div
+        style={styles.wrapper}
+        ref={this.scrollContainer}
+        onDoubleClick={() => onChange('')}>
         <textarea
           style={styles.textArea}
           value={value}

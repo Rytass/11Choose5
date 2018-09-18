@@ -11,6 +11,7 @@ import { bindActionCreators } from 'redux';
 import initNumberPool from '../helper/init';
 import KillSumSection from '../components/KillSumSection';
 import AcrossTailAllSection from '../components/AcrossTailAllSection';
+import BileSetSection from '../components/BileSetSection';
 import ResultSection from '../components/ResultSection';
 import { INIT_FORM_VALUE } from '../shared/initValue';
 import { MAIN_FORM } from '../shared/form';
@@ -101,6 +102,7 @@ class MainPage extends PureComponent<Props> {
         <div style={styles.mian}>
           <KillSumSection />
           <AcrossTailAllSection />
+          <BileSetSection />
         </div>
         <ResultSection isRunning={!!runningOptions} />
       </form>
