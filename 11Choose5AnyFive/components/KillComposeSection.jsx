@@ -79,7 +79,7 @@ class KillComposeSection extends PureComponent<Props> {
           name="killCompose"
           component={TextArea} />
         <div style={styles.btnWrapper}>
-          <ComposeButtonSet />
+          <ComposeButtonSet minLegth={5} formName="killCompose" />
           <div>
             <button
               type="button"

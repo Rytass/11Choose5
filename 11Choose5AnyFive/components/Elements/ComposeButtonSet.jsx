@@ -75,6 +75,8 @@ const styles = {
 type Props = {
   changeField: Function,
   originText: string,
+  minLegth: number,
+  formName: string,
 }
 
 class ComposeButtonSet extends PureComponent<Props> {
@@ -90,17 +92,23 @@ class ComposeButtonSet extends PureComponent<Props> {
     const {
       changeField,
       originText,
+      minLegth,
+      formName,
     } = this.props;
 
-    const usefulNumbers = sortBy(numberSet, num => num).map((number) => {
-      if (number < 10) return `0${number}`;
+    if (numberSet.length >= minLegth) {
+      const usefulNumbers = sortBy(numberSet, num => num).map((number) => {
+        if (number < 10) return `0${number}`;
 
-      return `${number}`;
-    });
+        return `${number}`;
+      });
 
-    const result = usefulNumbers.join(' ');
+      const result = usefulNumbers.join(' ');
 
-    changeField(`${originText}${result}\n`);
+      changeField(formName, `${originText}${result}\n`);
+    } else {
+      alert(`选择的数字必须大于或等于${minLegth}个`);
+    }
   }
 
   render() {
@@ -192,11 +200,13 @@ class ComposeButtonSet extends PureComponent<Props> {
 }
 
 const reduxHook = connect(
-  state => ({
-    originText: selector(state, 'killCompose'),
+  (state, {
+    formName,
+  }) => ({
+    originText: selector(state, formName),
   }),
   dispatch => bindActionCreators({
-    changeField: value => change(MAIN_FORM, 'killCompose', value),
+    changeField: (name, value) => change(MAIN_FORM, name, value),
   }, dispatch),
 );
 
