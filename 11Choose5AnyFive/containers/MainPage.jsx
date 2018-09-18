@@ -9,6 +9,7 @@ import {
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import initNumberPool from '../helper/init';
+import KillComposeSection from '../components/KillComposeSection';
 import KillSumSection from '../components/KillSumSection';
 import AcrossTailAllSection from '../components/AcrossTailAllSection';
 import AmountSection from '../components/AmountSection';
@@ -35,8 +36,9 @@ const styles = {
     justifyContent: 'flex-start',
     position: 'relative',
   },
-  mian: {
+  main: {
     flex: 1,
+    alignSelf: 'stretch',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'flex-start',
@@ -117,7 +119,8 @@ class MainPage extends PureComponent<Props> {
 
     return (
       <form style={styles.wrapper} onSubmit={handleSubmit(d => this.submit(d))}>
-        <div style={styles.mian}>
+        <div style={styles.main}>
+          <KillComposeSection />
           <div style={styles.sectionWrapper}>
             <div style={styles.subSectionWrapper}>
               <KillSumSection />
