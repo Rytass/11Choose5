@@ -9,6 +9,7 @@ import {
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { MAIN_FORM } from '../shared/form';
+import BigDefinitionForm from './Form/BigDefinitionForm';
 import BooleanButton from './Form/BooleanButton';
 
 const styles = {
@@ -111,6 +112,9 @@ class AmountSection extends PureComponent<Props> {
       <div style={styles.wrapper}>
         <div style={styles.lineWrapper}>
           <span style={styles.title}>【大号定义】</span>
+          <Field
+            name="bigDefinition"
+            component={BigDefinitionForm} />
         </div>
         <div style={styles.lineWrapper}>
           <span style={styles.title}>【大号个数】</span>
