@@ -76,7 +76,7 @@ class ResultArea extends PureComponent<Props> {
     };
 
     this.onContextMenu = () => {
-      ipcRenderer.send('CLIPBOARD_CACHE', this.props.resultNumber.map(num => transNumber(num.num)).join(' '));
+      ipcRenderer.send('CLIPBOARD_CACHE', this.props.resultNumber.map(num => transNumber(num.num)).join('\n'));
     };
   }
 

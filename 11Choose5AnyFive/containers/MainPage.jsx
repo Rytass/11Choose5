@@ -12,6 +12,7 @@ import initNumberPool from '../helper/init';
 import KillSumSection from '../components/KillSumSection';
 import AcrossTailAllSection from '../components/AcrossTailAllSection';
 import BileSetSection from '../components/BileSetSection';
+import BaseSection from '../components/BaseSection';
 import ResultSection from '../components/ResultSection';
 import { INIT_FORM_VALUE } from '../shared/initValue';
 import { MAIN_FORM } from '../shared/form';
@@ -33,9 +34,15 @@ const styles = {
   },
   mian: {
     flex: 1,
-    // alignSelf: 'stretch',
     display: 'flex',
     flexDirection: 'column',
+    alignItems: 'flex-start',
+    justifyContent: 'space-between',
+  },
+  sectionWrapper: {
+    alignSelf: 'stretch',
+    display: 'flex',
+    flexDirection: 'row',
     alignItems: 'flex-start',
     justifyContent: 'space-between',
   },
@@ -102,7 +109,10 @@ class MainPage extends PureComponent<Props> {
         <div style={styles.mian}>
           <KillSumSection />
           <AcrossTailAllSection />
-          <BileSetSection />
+          <div style={styles.sectionWrapper}>
+            <BileSetSection />
+            <BaseSection />
+          </div>
         </div>
         <ResultSection isRunning={!!runningOptions} />
       </form>
