@@ -32,7 +32,7 @@ const styles = {
     padding: '4px 0',
   },
   button: {
-    width: 45,
+    width: 30,
     margin: '0 1px',
   },
   title: {

@@ -11,6 +11,7 @@ import { bindActionCreators } from 'redux';
 import initNumberPool from '../helper/init';
 import KillSumSection from '../components/KillSumSection';
 import AcrossTailAllSection from '../components/AcrossTailAllSection';
+import ContinuousSection from '../components/ContinuousSection';
 import BileSetSection from '../components/BileSetSection';
 import MaxMinSection from '../components/MaxMinSection';
 import BaseSection from '../components/BaseSection';
@@ -48,6 +49,7 @@ const styles = {
     justifyContent: 'space-between',
   },
   subSectionWrapper: {
+    flex: 1,
     alignSelf: 'stretch',
     display: 'flex',
     flexDirection: 'column',
@@ -115,8 +117,15 @@ class MainPage extends PureComponent<Props> {
     return (
       <form style={styles.wrapper} onSubmit={handleSubmit(d => this.submit(d))}>
         <div style={styles.mian}>
-          <KillSumSection />
-          <AcrossTailAllSection />
+          <div style={styles.sectionWrapper}>
+            <div style={styles.subSectionWrapper}>
+              <KillSumSection />
+              <AcrossTailAllSection />
+            </div>
+            <div style={styles.subSectionWrapper}>
+              <ContinuousSection />
+            </div>
+          </div>
           <div style={styles.sectionWrapper}>
             <BileSetSection />
             <div style={styles.subSectionWrapper}>
