@@ -41,9 +41,14 @@ const styles = {
     display: 'flex',
     alignSelf: 'stretch',
     flexDirection: 'column',
-    alignItems: 'center',
+    alignItems: 'flex-start',
     justifyContent: 'center',
     margin: '0 0 0 12px',
+  },
+  hint: {
+    fontSize: 13,
+    color: '#4a4a4a',
+    margin: '0 0 12px 0',
   },
   actionBtn: {
     border: '1px solid #4a4a4a',
@@ -80,6 +85,9 @@ class KillComposeSection extends PureComponent<Props> {
           component={TextArea} />
         <div style={styles.btnWrapper}>
           <ComposeButtonSet minLegth={5} formName="killCompose" />
+          <p style={styles.hint}>
+            每次至少点击5个号码，一行一注，可粘贴。本功能可以杀垃圾复式/组选
+          </p>
           <div>
             <button
               type="button"
