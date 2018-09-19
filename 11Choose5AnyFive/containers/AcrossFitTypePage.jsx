@@ -9,6 +9,7 @@ import {
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import initNumberPool from '../helper/init';
+import KeepCrossFitSection from '../components/KeepCrossFitSection';
 import ResultSection from '../components/ResultSection';
 import { MAIN_FORM } from '../shared/form';
 import { NO_RESULT } from '../shared/message';
@@ -26,6 +27,15 @@ const styles = {
     alignItems: 'flex-start',
     justifyContent: 'flex-start',
     position: 'relative',
+  },
+  main: {
+    flex: 1,
+    height: '100%',
+    alignSelf: 'stretch',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'flex-start',
+    justifyContent: 'space-between',
   },
 };
 
@@ -87,7 +97,9 @@ class AcrossFitTypePage extends PureComponent<Props> {
 
     return (
       <form style={styles.wrapper} onSubmit={handleSubmit(d => this.submit(d))}>
-        AcrossFitTypePage
+        <div style={styles.main}>
+          <KeepCrossFitSection />
+        </div>
         <ResultSection isRunning={!!runningOptions} />
       </form>
     );
