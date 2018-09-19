@@ -4,6 +4,7 @@ import { acrossKiller } from '../helper/acrossKiller';
 import { tailKiller } from '../helper/tailKiller';
 import { allKiller } from '../helper/allKiller';
 import { continuousKiller } from '../helper/continuousKiller';
+import { bileKiller } from '../helper/bileKiller';
 import {
   maxKeeper,
   minKeeper,
@@ -26,6 +27,7 @@ export const FILTER_ACTIONS = [
   tailKiller,
   allKiller,
   continuousKiller,
+  bileKiller,
   maxKeeper,
   minKeeper,
   twoSetKiller,
