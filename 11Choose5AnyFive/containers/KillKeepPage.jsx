@@ -10,6 +10,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import initNumberPool from '../helper/init';
 import KillTwoSetSection from '../components/KillTwoSetSection';
+import KeepTwoSetSection from '../components/KeepTwoSetSection';
 import ResultSection from '../components/ResultSection';
 import { MAIN_FORM } from '../shared/form';
 import { NO_RESULT } from '../shared/message';
@@ -98,6 +99,7 @@ class KillKeepPage extends PureComponent<Props> {
       <form style={styles.wrapper} onSubmit={handleSubmit(d => this.submit(d))}>
         <div style={styles.main}>
           <KillTwoSetSection />
+          <KeepTwoSetSection />
         </div>
         <ResultSection isRunning={!!runningOptions} />
       </form>
