@@ -3,6 +3,11 @@ import { sumKiller } from '../helper/sumKiller';
 import { acrossKiller } from '../helper/acrossKiller';
 import { tailKiller } from '../helper/tailKiller';
 import { allKiller } from '../helper/allKiller';
+import {
+  bigNumberKeeper,
+  oddNumberKeeper,
+  primeNumberKeeper,
+} from '../helper/amountKeeper';
 import { continuousKiller } from '../helper/continuousKiller';
 import { bileKiller } from '../helper/bileKiller';
 import {
@@ -32,6 +37,9 @@ export const FILTER_ACTIONS = [
   acrossKiller,
   tailKiller,
   allKiller,
+  bigNumberKeeper,
+  oddNumberKeeper,
+  primeNumberKeeper,
   continuousKiller,
   bileKiller,
   maxKeeper,

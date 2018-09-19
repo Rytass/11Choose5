@@ -119,46 +119,46 @@ class AmountSection extends PureComponent<Props> {
         <div style={styles.lineWrapper}>
           <span style={styles.title}>【大号个数】</span>
           <Field
-            name="bigZero"
+            name="bigNumberZero"
             text="0"
             buttonstyle={styles.button}
             component={BooleanButton} />
           <Field
-            name="bigOne"
+            name="bigNumberOne"
             text="1"
             buttonstyle={styles.button}
             component={BooleanButton} />
           <Field
-            name="bigTwo"
+            name="bigNumberTwo"
             text="2"
             buttonstyle={styles.button}
             component={BooleanButton} />
           <Field
-            name="bigThree"
+            name="bigNumberThree"
             text="3"
             buttonstyle={styles.button}
             component={BooleanButton} />
           <Field
-            name="bigFour"
+            name="bigNumberFour"
             text="4"
             buttonstyle={styles.button}
             component={BooleanButton} />
           <Field
-            name="bigFive"
+            name="bigNumberFive"
             text="5"
             buttonstyle={styles.button}
             component={BooleanButton} />
           <button
             type="button"
             key="bigAll"
-            onClick={() => this.allValue('big')}
+            onClick={() => this.allValue('bigNumber')}
             style={styles.allBtn}>
             全
           </button>
           <button
             type="button"
             key="bigClear"
-            onClick={() => this.clearValue('big')}
+            onClick={() => this.clearValue('bigNumber')}
             style={styles.clearBtn}>
             清
           </button>
@@ -166,46 +166,46 @@ class AmountSection extends PureComponent<Props> {
         <div style={styles.lineWrapper}>
           <span style={styles.title}>【奇号个数】</span>
           <Field
-            name="oddZero"
+            name="oddNumberZero"
             text="0"
             buttonstyle={styles.button}
             component={BooleanButton} />
           <Field
-            name="oddOne"
+            name="oddNumberOne"
             text="1"
             buttonstyle={styles.button}
             component={BooleanButton} />
           <Field
-            name="oddTwo"
+            name="oddNumberTwo"
             text="2"
             buttonstyle={styles.button}
             component={BooleanButton} />
           <Field
-            name="oddThree"
+            name="oddNumberThree"
             text="3"
             buttonstyle={styles.button}
             component={BooleanButton} />
           <Field
-            name="oddFour"
+            name="oddNumberFour"
             text="4"
             buttonstyle={styles.button}
             component={BooleanButton} />
           <Field
-            name="oddFive"
+            name="oddNumberFive"
             text="5"
             buttonstyle={styles.button}
             component={BooleanButton} />
           <button
             type="button"
             key="oddAll"
-            onClick={() => this.allValue('odd')}
+            onClick={() => this.allValue('oddNumber')}
             style={styles.allBtn}>
             全
           </button>
           <button
             type="button"
             key="oddClear"
-            onClick={() => this.clearValue('odd')}
+            onClick={() => this.clearValue('oddNumber')}
             style={styles.clearBtn}>
             清
           </button>
@@ -213,46 +213,46 @@ class AmountSection extends PureComponent<Props> {
         <div style={styles.lineWrapper}>
           <span style={styles.title}>【质号个数】</span>
           <Field
-            name="primeZero"
+            name="primeNumberZero"
             text="0"
             buttonstyle={styles.button}
             component={BooleanButton} />
           <Field
-            name="primeOne"
+            name="primeNumberOne"
             text="1"
             buttonstyle={styles.button}
             component={BooleanButton} />
           <Field
-            name="primeTwo"
+            name="primeNumberTwo"
             text="2"
             buttonstyle={styles.button}
             component={BooleanButton} />
           <Field
-            name="primeThree"
+            name="primeNumberThree"
             text="3"
             buttonstyle={styles.button}
             component={BooleanButton} />
           <Field
-            name="primeFour"
+            name="primeNumberFour"
             text="4"
             buttonstyle={styles.button}
             component={BooleanButton} />
           <Field
-            name="primeFive"
+            name="primeNumberFive"
             text="5"
             buttonstyle={styles.button}
             component={BooleanButton} />
           <button
             type="button"
             key="primeAll"
-            onClick={() => this.allValue('prime')}
+            onClick={() => this.allValue('primeNumber')}
             style={styles.allBtn}>
             全
           </button>
           <button
             type="button"
             key="primeClear"
-            onClick={() => this.clearValue('prime')}
+            onClick={() => this.clearValue('primeNumber')}
             style={styles.clearBtn}>
             清
           </button>
