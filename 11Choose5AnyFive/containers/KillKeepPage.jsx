@@ -9,6 +9,7 @@ import {
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import initNumberPool from '../helper/init';
+import KillTwoSetSection from '../components/KillTwoSetSection';
 import ResultSection from '../components/ResultSection';
 import { MAIN_FORM } from '../shared/form';
 import { NO_RESULT } from '../shared/message';
@@ -18,6 +19,7 @@ const selector = formValueSelector(MAIN_FORM);
 
 const styles = {
   wrapper: {
+    height: 650,
     padding: 8,
     width: '100%',
     display: 'flex',
@@ -25,6 +27,14 @@ const styles = {
     alignItems: 'flex-start',
     justifyContent: 'flex-start',
     position: 'relative',
+  },
+  main: {
+    flex: 1,
+    alignSelf: 'stretch',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'flex-start',
+    justifyContent: 'space-between',
   },
 };
 
@@ -86,7 +96,9 @@ class KillKeepPage extends PureComponent<Props> {
 
     return (
       <form style={styles.wrapper} onSubmit={handleSubmit(d => this.submit(d))}>
-        KillKeepPage
+        <div style={styles.main}>
+          <KillTwoSetSection />
+        </div>
         <ResultSection isRunning={!!runningOptions} />
       </form>
     );
