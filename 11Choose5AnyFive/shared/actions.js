@@ -8,6 +8,7 @@ import {
   minKeeper,
 } from '../helper/maxMinKeeper';
 import { twoSetKiller } from '../helper/twoSetKiller';
+import { twoSetKeeper } from '../helper/twoSetKeeper';
 import {
   bigTypeKeeper,
   oddTypeKeeper,
@@ -26,6 +27,7 @@ export const FILTER_ACTIONS = [
   maxKeeper,
   minKeeper,
   twoSetKiller,
+  twoSetKeeper,
   bigTypeKeeper,
   oddTypeKeeper,
   primeTypeKeeper,
