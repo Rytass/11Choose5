@@ -75,7 +75,8 @@ const styles = {
 type Props = {
   changeField: Function,
   originText: string,
-  minLegth: number,
+  minLength: number,
+  maxLength: number,
   formName: string,
 }
 
@@ -92,11 +93,12 @@ class ComposeButtonSet extends PureComponent<Props> {
     const {
       changeField,
       originText,
-      minLegth,
+      minLength,
+      maxLength,
       formName,
     } = this.props;
 
-    if (numberSet.length >= minLegth) {
+    if (numberSet.length >= minLength && maxLength >= numberSet.length) {
       const usefulNumbers = sortBy(numberSet, num => num).map((number) => {
         if (number < 10) return `0${number}`;
 
@@ -106,8 +108,13 @@ class ComposeButtonSet extends PureComponent<Props> {
       const result = usefulNumbers.join(' ');
 
       changeField(formName, `${originText}${result}\n`);
+      return;
+    }
+
+    if (minLength === maxLength) {
+      alert(`选择的数字必须等于${minLength}个`);
     } else {
-      alert(`选择的数字必须大于或等于${minLegth}个`);
+      alert(`选择的数字必须大于或等于${minLength}个`);
     }
   }
 

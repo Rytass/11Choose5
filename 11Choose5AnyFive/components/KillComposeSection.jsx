@@ -84,7 +84,7 @@ class KillComposeSection extends PureComponent<Props> {
           name="killCompose"
           component={TextArea} />
         <div style={styles.btnWrapper}>
-          <ComposeButtonSet minLegth={5} formName="killCompose" />
+          <ComposeButtonSet minLength={5} maxLength={11} formName="killCompose" />
           <p style={styles.hint}>
             每次至少点击5个号码，一行一注，可粘贴。本功能可以杀垃圾复式/组选
           </p>
