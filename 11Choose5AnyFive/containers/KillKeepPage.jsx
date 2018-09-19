@@ -12,6 +12,7 @@ import initNumberPool from '../helper/init';
 import KillTwoSetSection from '../components/KillTwoSetSection';
 import KeepTwoSetSection from '../components/KeepTwoSetSection';
 import KillThreeSection from '../components/KillThreeSection';
+import KeepThreeSection from '../components/KeepThreeSection';
 import ResultSection from '../components/ResultSection';
 import { MAIN_FORM } from '../shared/form';
 import { NO_RESULT } from '../shared/message';
@@ -102,6 +103,7 @@ class KillKeepPage extends PureComponent<Props> {
           <KillTwoSetSection />
           <KeepTwoSetSection />
           <KillThreeSection />
+          <KeepThreeSection />
         </div>
         <ResultSection isRunning={!!runningOptions} />
       </form>
