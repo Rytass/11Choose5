@@ -4,6 +4,10 @@ import { acrossKiller } from '../helper/acrossKiller';
 import { tailKiller } from '../helper/tailKiller';
 import { allKiller } from '../helper/allKiller';
 import {
+  maxKeeper,
+  minKeeper,
+} from '../helper/maxMinKeeper';
+import {
   bigTypeKeeper,
   oddTypeKeeper,
   primeTypeKeeper,
@@ -18,6 +22,8 @@ export const FILTER_ACTIONS = [
   acrossKiller,
   tailKiller,
   allKiller,
+  maxKeeper,
+  minKeeper,
   bigTypeKeeper,
   oddTypeKeeper,
   primeTypeKeeper,
