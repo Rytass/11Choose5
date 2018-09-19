@@ -9,11 +9,10 @@ import {
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import initNumberPool from '../helper/init';
-import KillTwoSetSection from '../components/KillTwoSetSection';
-import KeepTwoSetSection from '../components/KeepTwoSetSection';
 import KillThreeSection from '../components/KillThreeSection';
 import KeepThreeSection from '../components/KeepThreeSection';
 import KillFourSection from '../components/KillFourSection';
+import KeepFourSection from '../components/KeepFourSection';
 import ResultSection from '../components/ResultSection';
 import { MAIN_FORM } from '../shared/form';
 import { NO_RESULT } from '../shared/message';
@@ -49,7 +48,7 @@ type Props = {
   failTo: number,
 }
 
-class KillKeepPage extends PureComponent<Props> {
+class KillKeepThreeFourPage extends PureComponent<Props> {
   static ACTIONS = FILTER_ACTIONS;
 
   state = {
@@ -69,7 +68,7 @@ class KillKeepPage extends PureComponent<Props> {
       } = this.props;
 
       setTimeout(() => {
-        const result = KillKeepPage.ACTIONS
+        const result = KillKeepThreeFourPage.ACTIONS
           .reduce((prev, curr) => curr(prev, runningOptions), initNumberPool())
           .filter(num => (
             num.killFailedCount >= failFrom && failTo >= num.killFailedCount));
@@ -101,11 +100,10 @@ class KillKeepPage extends PureComponent<Props> {
     return (
       <form style={styles.wrapper} onSubmit={handleSubmit(d => this.submit(d))}>
         <div style={styles.main}>
-          <KillTwoSetSection />
-          <KeepTwoSetSection />
           <KillThreeSection />
           <KeepThreeSection />
           <KillFourSection />
+          <KeepFourSection />
         </div>
         <ResultSection isRunning={!!runningOptions} />
       </form>
@@ -128,4 +126,4 @@ const reduxHook = connect(
   }, dispatch),
 );
 
-export default formHook(reduxHook(KillKeepPage));
+export default formHook(reduxHook(KillKeepThreeFourPage));

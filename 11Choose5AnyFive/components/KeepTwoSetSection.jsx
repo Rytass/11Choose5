@@ -21,7 +21,7 @@ const styles = {
     justifyContent: 'center',
     padding: '12px 8px 8px 8px',
     border: '1px solid #4a4a4a',
-    margin: '4px 8px 8px 8px',
+    margin: '4px 8px 0 8px',
   },
   main: {
     alignSelf: 'stretch',

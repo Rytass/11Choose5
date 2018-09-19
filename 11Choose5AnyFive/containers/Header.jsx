@@ -37,10 +37,17 @@ function Header() {
       </NavLink>
       <NavLink
         className="hover-btn"
-        key="killKeep"
+        key="killKeepTwo"
         style={styles.link}
-        to="/killKeep">
-        杀/出二三四码
+        to="/killKeepTwo">
+        杀/出二码
+      </NavLink>
+      <NavLink
+        className="hover-btn"
+        key="killKeepThreeFour"
+        style={styles.link}
+        to="/killKeepThreeFour">
+        杀/出三四码
       </NavLink>
       <NavLink
         className="hover-btn"
