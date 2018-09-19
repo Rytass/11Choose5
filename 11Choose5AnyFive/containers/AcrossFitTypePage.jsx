@@ -10,6 +10,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import initNumberPool from '../helper/init';
 import KeepCrossFitSection from '../components/KeepCrossFitSection';
+import TypeSection from '../components/TypeSection';
 import ResultSection from '../components/ResultSection';
 import { MAIN_FORM } from '../shared/form';
 import { NO_RESULT } from '../shared/message';
@@ -99,6 +100,7 @@ class AcrossFitTypePage extends PureComponent<Props> {
       <form style={styles.wrapper} onSubmit={handleSubmit(d => this.submit(d))}>
         <div style={styles.main}>
           <KeepCrossFitSection />
+          <TypeSection />
         </div>
         <ResultSection isRunning={!!runningOptions} />
       </form>
