@@ -258,6 +258,8 @@ export const INIT_FORM_VALUE = {
   keepTwoSetTenEleven: false,
   killThree: '',
   keepThree: '',
+  killFour: '',
+  keepFour: '',
 };
 
 export default {

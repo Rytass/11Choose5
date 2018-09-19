@@ -13,6 +13,7 @@ import KillTwoSetSection from '../components/KillTwoSetSection';
 import KeepTwoSetSection from '../components/KeepTwoSetSection';
 import KillThreeSection from '../components/KillThreeSection';
 import KeepThreeSection from '../components/KeepThreeSection';
+import KillFourSection from '../components/KillFourSection';
 import ResultSection from '../components/ResultSection';
 import { MAIN_FORM } from '../shared/form';
 import { NO_RESULT } from '../shared/message';
@@ -104,6 +105,7 @@ class KillKeepPage extends PureComponent<Props> {
           <KeepTwoSetSection />
           <KillThreeSection />
           <KeepThreeSection />
+          <KillFourSection />
         </div>
         <ResultSection isRunning={!!runningOptions} />
       </form>
