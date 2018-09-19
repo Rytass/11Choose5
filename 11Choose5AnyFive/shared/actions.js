@@ -3,6 +3,7 @@ import { sumKiller } from '../helper/sumKiller';
 import { acrossKiller } from '../helper/acrossKiller';
 import { tailKiller } from '../helper/tailKiller';
 import { allKiller } from '../helper/allKiller';
+import { continuousKiller } from '../helper/continuousKiller';
 import {
   maxKeeper,
   minKeeper,
@@ -24,6 +25,7 @@ export const FILTER_ACTIONS = [
   acrossKiller,
   tailKiller,
   allKiller,
+  continuousKiller,
   maxKeeper,
   minKeeper,
   twoSetKiller,
