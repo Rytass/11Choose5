@@ -1,4 +1,5 @@
 import { baseKiller } from '../helper/baseKiller';
+import { composeKiller } from '../helper/composeKiller';
 import { sumKiller } from '../helper/sumKiller';
 import { acrossKiller } from '../helper/acrossKiller';
 import { tailKiller } from '../helper/tailKiller';
@@ -33,6 +34,7 @@ import {
 
 export const FILTER_ACTIONS = [
   baseKiller,
+  composeKiller,
   sumKiller,
   acrossKiller,
   tailKiller,
