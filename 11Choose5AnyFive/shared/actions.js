@@ -20,6 +20,7 @@ import { twoSetKeeper } from '../helper/twoSetKeeper';
 import { threeKiller } from '../helper/threeKiller';
 import { threeKeeper } from '../helper/threeKeeper';
 import { fourKiller } from '../helper/fourKiller';
+import { fourKeeper } from '../helper/fourKeeper';
 import {
   twoAcrossKeeper,
   twoFitKeeper,
@@ -54,6 +55,7 @@ export const FILTER_ACTIONS = [
   threeKiller,
   threeKeeper,
   fourKiller,
+  fourKeeper,
   twoAcrossKeeper,
   twoFitKeeper,
   threeFitKeeper,
