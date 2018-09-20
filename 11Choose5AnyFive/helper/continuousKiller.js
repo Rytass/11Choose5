@@ -1,3 +1,5 @@
+import { parseNumber } from './operator';
+
 export function continuousKiller(numbers, options) {
   const composed = Object.entries(options)
     .filter(entry => entry[0].match(/Continuous/) && entry[1] === true);
@@ -350,6 +352,29 @@ export function continuousKiller(numbers, options) {
               && ~num.num.indexOf('9')
               && ~num.num.indexOf('0')
               && ~num.num.indexOf('E')
+            )
+          ) {
+            num.killFailed();
+          }
+        });
+        break;
+      }
+
+      case 'twoContinuousThreeContinuous': {
+        numbers.forEach((num) => {
+          const intervalArray = [
+            parseNumber(num.serial[1]) - parseNumber(num.serial[0]),
+            parseNumber(num.serial[2]) - parseNumber(num.serial[1]),
+            parseNumber(num.serial[3]) - parseNumber(num.serial[2]),
+            parseNumber(num.serial[4]) - parseNumber(num.serial[3]),
+          ];
+
+          if (
+            intervalArray[0] === 1
+            && intervalArray[3] === 1
+            && (
+              (intervalArray[1] === 1 && intervalArray[2] > 1)
+              || (intervalArray[1] > 1 && intervalArray[2] === 1)
             )
           ) {
             num.killFailed();
