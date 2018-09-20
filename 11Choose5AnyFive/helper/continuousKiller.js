@@ -360,6 +360,41 @@ export function continuousKiller(numbers, options) {
         break;
       }
 
+      case 'doubleTwoContinuous': {
+        numbers.forEach((num) => {
+          const intervalArray = [
+            parseNumber(num.serial[1]) - parseNumber(num.serial[0]),
+            parseNumber(num.serial[2]) - parseNumber(num.serial[1]),
+            parseNumber(num.serial[3]) - parseNumber(num.serial[2]),
+            parseNumber(num.serial[4]) - parseNumber(num.serial[3]),
+          ];
+
+          if (
+            (
+              intervalArray[0] === 1
+              && intervalArray[1] > 1
+              && intervalArray[2] > 1
+              && intervalArray[3] === 1
+            )
+            || (
+              intervalArray[0] === 1
+              && intervalArray[1] > 1
+              && intervalArray[2] === 1
+              && intervalArray[3] > 1
+            )
+            || (
+              intervalArray[0] > 1
+              && intervalArray[1] === 1
+              && intervalArray[2] > 1
+              && intervalArray[3] === 1
+            )
+          ) {
+            num.killFailed();
+          }
+        });
+        break;
+      }
+
       case 'twoContinuousThreeContinuous': {
         numbers.forEach((num) => {
           const intervalArray = [
