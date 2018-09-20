@@ -10,17 +10,18 @@ export function continuousKiller(numbers, options) {
     switch (condition) {
       case 'noContinuous': {
         numbers.forEach((num) => {
+          const intervalArray = [
+            parseNumber(num.serial[1]) - parseNumber(num.serial[0]),
+            parseNumber(num.serial[2]) - parseNumber(num.serial[1]),
+            parseNumber(num.serial[3]) - parseNumber(num.serial[2]),
+            parseNumber(num.serial[4]) - parseNumber(num.serial[3]),
+          ];
+
           if (
-            !(~num.num.indexOf('1') && ~num.num.indexOf('2'))
-            && !(~num.num.indexOf('2') && ~num.num.indexOf('3'))
-            && !(~num.num.indexOf('3') && ~num.num.indexOf('4'))
-            && !(~num.num.indexOf('4') && ~num.num.indexOf('5'))
-            && !(~num.num.indexOf('5') && ~num.num.indexOf('6'))
-            && !(~num.num.indexOf('6') && ~num.num.indexOf('7'))
-            && !(~num.num.indexOf('7') && ~num.num.indexOf('8'))
-            && !(~num.num.indexOf('8') && ~num.num.indexOf('9'))
-            && !(~num.num.indexOf('9') && ~num.num.indexOf('0'))
-            && !(~num.num.indexOf('0') && ~num.num.indexOf('E'))
+            intervalArray[0] > 1
+            && intervalArray[1] > 1
+            && intervalArray[2] > 1
+            && intervalArray[3] > 1
           ) {
             num.killFailed();
           }
@@ -231,68 +232,25 @@ export function continuousKiller(numbers, options) {
 
       case 'fourContinuous': {
         numbers.forEach((num) => {
+          const intervalArray = [
+            parseNumber(num.serial[1]) - parseNumber(num.serial[0]),
+            parseNumber(num.serial[2]) - parseNumber(num.serial[1]),
+            parseNumber(num.serial[3]) - parseNumber(num.serial[2]),
+            parseNumber(num.serial[4]) - parseNumber(num.serial[3]),
+          ];
+
           if (
             (
-              ~num.num.indexOf('1')
-              && ~num.num.indexOf('2')
-              && ~num.num.indexOf('3')
-              && ~num.num.indexOf('4')
-              && !~num.num.indexOf('5')
+              intervalArray[0] === 1
+              && intervalArray[1] === 1
+              && intervalArray[2] === 1
+              && intervalArray[3] > 1
             )
             || (
-              !~num.num.indexOf('1')
-              && ~num.num.indexOf('2')
-              && ~num.num.indexOf('3')
-              && ~num.num.indexOf('4')
-              && ~num.num.indexOf('5')
-              && !~num.num.indexOf('6')
-            )
-            || (
-              !~num.num.indexOf('2')
-              && ~num.num.indexOf('3')
-              && ~num.num.indexOf('4')
-              && ~num.num.indexOf('5')
-              && ~num.num.indexOf('6')
-              && !~num.num.indexOf('7')
-            )
-            || (
-              !~num.num.indexOf('3')
-              && ~num.num.indexOf('4')
-              && ~num.num.indexOf('5')
-              && ~num.num.indexOf('6')
-              && ~num.num.indexOf('7')
-              && !~num.num.indexOf('8')
-            )
-            || (
-              !~num.num.indexOf('4')
-              && ~num.num.indexOf('5')
-              && ~num.num.indexOf('6')
-              && ~num.num.indexOf('7')
-              && ~num.num.indexOf('8')
-              && !~num.num.indexOf('9')
-            )
-            || (
-              !~num.num.indexOf('5')
-              && ~num.num.indexOf('6')
-              && ~num.num.indexOf('7')
-              && ~num.num.indexOf('8')
-              && ~num.num.indexOf('9')
-              && !~num.num.indexOf('0')
-            )
-            || (
-              !~num.num.indexOf('6')
-              && ~num.num.indexOf('7')
-              && ~num.num.indexOf('8')
-              && ~num.num.indexOf('9')
-              && ~num.num.indexOf('0')
-              && !~num.num.indexOf('E')
-            )
-            || (
-              !~num.num.indexOf('7')
-              && ~num.num.indexOf('8')
-              && ~num.num.indexOf('9')
-              && ~num.num.indexOf('0')
-              && ~num.num.indexOf('E')
+              intervalArray[0] > 1
+              && intervalArray[1] === 1
+              && intervalArray[2] === 1
+              && intervalArray[3] === 1
             )
           ) {
             num.killFailed();
@@ -303,56 +261,18 @@ export function continuousKiller(numbers, options) {
 
       case 'fiveContinuous': {
         numbers.forEach((num) => {
+          const intervalArray = [
+            parseNumber(num.serial[1]) - parseNumber(num.serial[0]),
+            parseNumber(num.serial[2]) - parseNumber(num.serial[1]),
+            parseNumber(num.serial[3]) - parseNumber(num.serial[2]),
+            parseNumber(num.serial[4]) - parseNumber(num.serial[3]),
+          ];
+
           if (
-            (
-              ~num.num.indexOf('1')
-              && ~num.num.indexOf('2')
-              && ~num.num.indexOf('3')
-              && ~num.num.indexOf('4')
-              && ~num.num.indexOf('5')
-            )
-            || (
-              ~num.num.indexOf('2')
-              && ~num.num.indexOf('3')
-              && ~num.num.indexOf('4')
-              && ~num.num.indexOf('5')
-              && ~num.num.indexOf('6')
-            )
-            || (
-              ~num.num.indexOf('3')
-              && ~num.num.indexOf('4')
-              && ~num.num.indexOf('5')
-              && ~num.num.indexOf('6')
-              && ~num.num.indexOf('7')
-            )
-            || (
-              ~num.num.indexOf('4')
-              && ~num.num.indexOf('5')
-              && ~num.num.indexOf('6')
-              && ~num.num.indexOf('7')
-              && ~num.num.indexOf('8')
-            )
-            || (
-              ~num.num.indexOf('5')
-              && ~num.num.indexOf('6')
-              && ~num.num.indexOf('7')
-              && ~num.num.indexOf('8')
-              && ~num.num.indexOf('9')
-            )
-            || (
-              ~num.num.indexOf('6')
-              && ~num.num.indexOf('7')
-              && ~num.num.indexOf('8')
-              && ~num.num.indexOf('9')
-              && ~num.num.indexOf('0')
-            )
-            || (
-              ~num.num.indexOf('7')
-              && ~num.num.indexOf('8')
-              && ~num.num.indexOf('9')
-              && ~num.num.indexOf('0')
-              && ~num.num.indexOf('E')
-            )
+            intervalArray[0] === 1
+            && intervalArray[1] === 1
+            && intervalArray[2] === 1
+            && intervalArray[3] === 1
           ) {
             num.killFailed();
           }
