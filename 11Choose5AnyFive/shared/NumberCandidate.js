@@ -1,3 +1,5 @@
+import { parseNumber } from '../helper/operator';
+
 export default class NumberCandidate {
   constructor(num) {
     this.num = num;
@@ -35,7 +37,7 @@ export default class NumberCandidate {
   }
 
   getSerialNumber() {
-    this.serialNum = Array.from(this.num).sort((a, b) => parseInt(a, 10) > parseInt(b, 10)).join('');
+    this.serialNum = Array.from(this.num).sort((a, b) => parseNumber(a) > parseNumber(b)).join('');
 
     return this.serialNum;
   }

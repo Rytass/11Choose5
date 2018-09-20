@@ -17,6 +17,7 @@ import {
 } from '../helper/maxMinKeeper';
 import { twoSetKiller } from '../helper/twoSetKiller';
 import { twoSetKeeper } from '../helper/twoSetKeeper';
+import { threeKiller } from '../helper/threeKiller';
 import {
   twoAcrossKeeper,
   twoFitKeeper,
@@ -48,6 +49,7 @@ export const FILTER_ACTIONS = [
   minKeeper,
   twoSetKiller,
   twoSetKeeper,
+  threeKiller,
   twoAcrossKeeper,
   twoFitKeeper,
   threeFitKeeper,
