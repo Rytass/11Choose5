@@ -68,6 +68,6 @@ api/uploads/**/*
 .DS_Store
 
 # Dist
-PK10FiveStars/dist
+11Choose5AnyFive/dist
 
 .DS_Store
