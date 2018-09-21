@@ -1,0 +1,10 @@
+directories:
+  output: dist
+  buildResources: build
+appId: com.rytass.11Choose5AnyFive
+productName: 11选5 任5
+copyright: Rytass Corp.
+win:
+  target:
+    - portable
+electronVersion: 2.0.10

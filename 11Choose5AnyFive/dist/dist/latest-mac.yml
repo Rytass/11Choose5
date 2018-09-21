@@ -1,0 +1,10 @@
+version: 1.0.1
+files:
+  - url: 11choose5-1.0.1-mac.zip
+    sha512: RSjDpTJ+wDzduHVq9YkGS59nJ+wEfkkOnZE3yaabmhpKv/CGrHxDe2KJSsOCCsBzF7Of669ne9wVD+xAyyKXxw==
+  - url: 11choose5-1.0.1.dmg
+    sha512: LDWrnIjyPQkVqaglFC+GCwC3/d0r4hCgY6fS0RmzzC4d85cHXcjq0KSs9R25k11XGsZ3ASus0ChRfV3Ulsq4Nw==
+    size: 48952828
+path: 11choose5-1.0.1-mac.zip
+sha512: RSjDpTJ+wDzduHVq9YkGS59nJ+wEfkkOnZE3yaabmhpKv/CGrHxDe2KJSsOCCsBzF7Of669ne9wVD+xAyyKXxw==
+releaseDate: '2018-09-21T04:59:04.481Z'

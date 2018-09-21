@@ -4,6 +4,10 @@
   "description": "11choose5",
   "main": "./11Choose5AnyFive/main.js",
   "scripts": {
+    "build": "npm run build:11Choose5AnyFive",
+    "build:copyConfig:11Choose5AnyFive": "cp -r ./11Choose5AnyFive/static/* ./11Choose5AnyFive/dist && cp ./11Choose5AnyFive/production/* ./11Choose5AnyFive/dist",
+    "build:makeBinary:11Choose5AnyFive": "electron-builder build -mw --x64 --ia32 -c build.json --project ./11Choose5AnyFive/dist",
+    "build:11Choose5AnyFive": "webpack --config ./11Choose5AnyFive/webpack.config.js -p --optimize-minimize && npm run build:copyConfig:11Choose5AnyFive && npm run build:makeBinary:11Choose5AnyFive",
     "start": "electron -r @babel/register .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
