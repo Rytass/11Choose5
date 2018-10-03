@@ -13,6 +13,7 @@ import KillChooseSection from '../components/KillChooseSection';
 import KillSumSection from '../components/KillSumSection';
 import PositionSection from '../components/PositionSection';
 import AcrossTailAllSection from '../components/AcrossTailAllSection';
+import BileSetSection from '../components/BileSetSection';
 import ResultSection from '../components/ResultSection';
 import { INIT_FORM_VALUE } from '../shared/initValue';
 import { MAIN_FORM } from '../shared/form';
@@ -126,13 +127,13 @@ class MainPage extends PureComponent<Props> {
               <KillSumSection />
             </div>
           </div>
-          {/* <div style={styles.sectionWrapper}>
+          <div style={styles.sectionWrapper}>
             <BileSetSection />
-            <div style={styles.subSectionWrapper}>
+            {/* <div style={styles.subSectionWrapper}>
               <MaxMinSection />
               <BaseSection />
-            </div>
-          </div> */}
+            </div> */}
+          </div>
         </div>
         <ResultSection isRunning={!!runningOptions} />
       </form>
