@@ -1,0 +1,16 @@
+{
+  "presets": [
+    ["@babel/env", {
+      "targets": {
+        "browsers": ["last 2 versions"]
+      }
+    }],
+    "@babel/react",
+    "@babel/flow"
+  ],
+  "plugins": [
+    "@babel/transform-runtime",
+    "@babel/plugin-proposal-class-properties",
+    "react-hot-loader/babel"
+  ]
+}
