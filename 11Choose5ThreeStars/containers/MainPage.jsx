@@ -10,6 +10,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import initNumberPool from '../helper/init';
 import KillChooseSection from '../components/KillChooseSection';
+import AcrossTailAllSection from '../components/AcrossTailAllSection';
 import ResultSection from '../components/ResultSection';
 import { INIT_FORM_VALUE } from '../shared/initValue';
 import { MAIN_FORM } from '../shared/form';
@@ -114,17 +115,17 @@ class MainPage extends PureComponent<Props> {
       <form style={styles.wrapper} onSubmit={handleSubmit(d => this.submit(d))}>
         <div style={styles.main}>
           <KillChooseSection />
-          {/* <div style={styles.sectionWrapper}>
+          <div style={styles.sectionWrapper}>
             <div style={styles.subSectionWrapper}>
-              <KillSumSection />
+              {/* <KillSumSection /> */}
               <AcrossTailAllSection />
             </div>
-            <div style={styles.subSectionWrapper}>
+            {/* <div style={styles.subSectionWrapper}>
               <AmountSection />
               <ContinuousSection />
-            </div>
+            </div> */}
           </div>
-          <div style={styles.sectionWrapper}>
+          {/* <div style={styles.sectionWrapper}>
             <BileSetSection />
             <div style={styles.subSectionWrapper}>
               <MaxMinSection />
