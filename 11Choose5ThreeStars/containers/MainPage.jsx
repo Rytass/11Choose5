@@ -29,7 +29,7 @@ const selector = formValueSelector(MAIN_FORM);
 
 const styles = {
   wrapper: {
-    height: 650,
+    height: 600,
     padding: 8,
     width: '100%',
     display: 'flex',

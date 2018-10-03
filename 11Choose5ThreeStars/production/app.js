@@ -13,8 +13,8 @@ let mainWindow;
 
 app.on('ready', () => {
   const config = {
-    width: 1280,
-    height: 750,
+    width: 1210,
+    height: 700,
   };
 
   mainWindow = new BrowserWindow(config);
