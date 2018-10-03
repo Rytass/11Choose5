@@ -22,7 +22,7 @@ const selector = formValueSelector(MAIN_FORM);
 
 const styles = {
   wrapper: {
-    width: 250,
+    width: 200,
     height: '100%',
     display: 'flex',
     alignSelf: 'stretch',

@@ -1,6 +1,7 @@
 // @flow
 
 import React, { PureComponent } from 'react';
+import radium from 'radium';
 import {
   change,
   reduxForm,
@@ -14,6 +15,9 @@ import KillSumSection from '../components/KillSumSection';
 import PositionSection from '../components/PositionSection';
 import AcrossTailAllSection from '../components/AcrossTailAllSection';
 import BileSetSection from '../components/BileSetSection';
+import BigSmallSection from '../components/BigSmallSection';
+import OddEvenSection from '../components/OddEvenSection';
+import PrimeCompositeSection from '../components/PrimeCompositeSection';
 import ResultSection from '../components/ResultSection';
 import { INIT_FORM_VALUE } from '../shared/initValue';
 import { MAIN_FORM } from '../shared/form';
@@ -49,12 +53,14 @@ const styles = {
     justifyContent: 'space-between',
   },
   subSectionWrapper: {
-    // flex: 1,
     alignSelf: 'stretch',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'flex-start',
     justifyContent: 'space-between',
+  },
+  haveFlex: {
+    flex: 1,
   },
 };
 
@@ -129,10 +135,11 @@ class MainPage extends PureComponent<Props> {
           </div>
           <div style={styles.sectionWrapper}>
             <BileSetSection />
-            {/* <div style={styles.subSectionWrapper}>
-              <MaxMinSection />
-              <BaseSection />
-            </div> */}
+            <div style={[styles.subSectionWrapper, styles.haveFlex]}>
+              <BigSmallSection />
+              <OddEvenSection />
+              <PrimeCompositeSection />
+            </div>
           </div>
         </div>
         <ResultSection isRunning={!!runningOptions} />
@@ -157,4 +164,4 @@ const reduxHook = connect(
   }, dispatch),
 );
 
-export default formHook(reduxHook(MainPage));
+export default formHook(reduxHook(radium(MainPage)));
