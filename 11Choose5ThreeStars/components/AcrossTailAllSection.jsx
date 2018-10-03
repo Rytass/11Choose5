@@ -46,11 +46,11 @@ const styles = {
     fontSize: 14,
     color: '#4a4a4a',
     letterSpacing: 1,
-    margin: '0 12px 0 0',
+    margin: '0 2px 0 0',
   },
   clearBtn: {
     border: '1px solid #4a4a4a',
-    padding: '0 16px',
+    padding: '0 8px',
     backgroundColor: '#f2f2f2',
     fontSize: 13,
     letterSpacing: 1,
@@ -66,7 +66,7 @@ const styles = {
   },
   allBtn: {
     border: '1px solid #4a4a4a',
-    padding: '0 16px',
+    padding: '0 8px',
     backgroundColor: '#f2f2f2',
     fontSize: 13,
     letterSpacing: 1,

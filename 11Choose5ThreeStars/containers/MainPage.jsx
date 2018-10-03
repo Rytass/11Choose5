@@ -10,6 +10,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import initNumberPool from '../helper/init';
 import KillChooseSection from '../components/KillChooseSection';
+import KillSumSection from '../components/KillSumSection';
 import AcrossTailAllSection from '../components/AcrossTailAllSection';
 import ResultSection from '../components/ResultSection';
 import { INIT_FORM_VALUE } from '../shared/initValue';
@@ -46,7 +47,7 @@ const styles = {
     justifyContent: 'space-between',
   },
   subSectionWrapper: {
-    flex: 1,
+    // flex: 1,
     alignSelf: 'stretch',
     display: 'flex',
     flexDirection: 'column',
@@ -117,13 +118,11 @@ class MainPage extends PureComponent<Props> {
           <KillChooseSection />
           <div style={styles.sectionWrapper}>
             <div style={styles.subSectionWrapper}>
-              {/* <KillSumSection /> */}
               <AcrossTailAllSection />
             </div>
-            {/* <div style={styles.subSectionWrapper}>
-              <AmountSection />
-              <ContinuousSection />
-            </div> */}
+            <div style={styles.subSectionWrapper}>
+              <KillSumSection />
+            </div>
           </div>
           {/* <div style={styles.sectionWrapper}>
             <BileSetSection />
