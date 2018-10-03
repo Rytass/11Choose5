@@ -20,7 +20,7 @@ const styles = {
     justifyContent: 'flex-start',
     padding: '12px 8px 8px 8px',
     border: '1px solid #4a4a4a',
-    margin: '4px 8px 8px 8px',
+    margin: '4px 4px 8px 4px',
   },
   titleWrapper: {
     alignSelf: 'stretch',

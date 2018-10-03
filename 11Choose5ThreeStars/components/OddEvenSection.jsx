@@ -20,7 +20,7 @@ const styles = {
     justifyContent: 'flex-start',
     padding: 4,
     border: '1px solid #4a4a4a',
-    margin: '4px 8px 0 8px',
+    margin: '4px 4px 0 4px',
   },
   formWrapper: {
     display: 'flex',

@@ -24,7 +24,7 @@ const styles = {
     alignItems: 'flex-start',
     justifyContent: 'flex-start',
     padding: '12px 8px',
-    margin: '4px 4px 4px 8px',
+    margin: 4,
     border: '1px solid #4a4a4a',
   },
   title: {

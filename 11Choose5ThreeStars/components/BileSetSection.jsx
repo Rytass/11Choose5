@@ -19,7 +19,7 @@ const styles = {
     alignItems: 'center',
     justifyContent: 'center',
     padding: '10px 8px 6px 8px',
-    margin: '4px 8px 0 8px',
+    margin: '4px 4px 0 4px',
     border: '1px solid #4a4a4a',
   },
   titleWrapper: {
