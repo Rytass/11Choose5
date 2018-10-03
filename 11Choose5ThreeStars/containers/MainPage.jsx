@@ -11,6 +11,7 @@ import { bindActionCreators } from 'redux';
 import initNumberPool from '../helper/init';
 import KillChooseSection from '../components/KillChooseSection';
 import KillSumSection from '../components/KillSumSection';
+import PositionSection from '../components/PositionSection';
 import AcrossTailAllSection from '../components/AcrossTailAllSection';
 import ResultSection from '../components/ResultSection';
 import { INIT_FORM_VALUE } from '../shared/initValue';
@@ -119,6 +120,7 @@ class MainPage extends PureComponent<Props> {
           <div style={styles.sectionWrapper}>
             <div style={styles.subSectionWrapper}>
               <AcrossTailAllSection />
+              <PositionSection />
             </div>
             <div style={styles.subSectionWrapper}>
               <KillSumSection />
