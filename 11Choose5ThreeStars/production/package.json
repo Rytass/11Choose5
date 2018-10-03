@@ -1,7 +1,7 @@
 {
-  "name": "11Choose5AnyFive",
+  "name": "11Choose5ThreeStars",
   "version": "1.0.1",
-  "description": "11Choose5AnyFive",
+  "description": "11Choose5ThreeStars",
   "main": "app.js",
   "repository": {
     "type": "git",

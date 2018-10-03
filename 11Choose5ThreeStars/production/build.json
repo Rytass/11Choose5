@@ -1,0 +1,6 @@
+{
+  "appId": "com.rytass.11Choose5ThreeStars",
+  "productName": "11选5 3星",
+  "copyright": "Rytass Corp.",
+  "win": { "target": [ "portable" ] }
+}
