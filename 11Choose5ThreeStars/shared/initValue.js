@@ -275,6 +275,7 @@ export const INIT_FORM_VALUE = {
   keepTwoFitNumberTwo: false,
   keepTwoFitNumberThree: false,
   keepTwoFitCountWeight: false,
+  trash: '',
 };
 
 export default {

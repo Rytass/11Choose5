@@ -42,6 +42,13 @@ function Header() {
         to="/killKeepTwo">
         杀/出二码/二码合跨
       </NavLink>
+      <NavLink
+        className="hover-btn"
+        key="other"
+        style={styles.link}
+        to="/other">
+        大底/杀垃圾复式/杀012路/型态比例
+      </NavLink>
     </nav>
   );
 }
