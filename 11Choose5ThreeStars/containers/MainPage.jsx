@@ -13,6 +13,7 @@ import initNumberPool from '../helper/init';
 import KillChooseSection from '../components/KillChooseSection';
 import KillSumSection from '../components/KillSumSection';
 import AmountSection from '../components/AmountSection';
+import SpecialSection from '../components/SpecialSection';
 import PositionSection from '../components/PositionSection';
 import AcrossTailAllSection from '../components/AcrossTailAllSection';
 import BileSetSection from '../components/BileSetSection';
@@ -57,6 +58,13 @@ const styles = {
     alignSelf: 'stretch',
     display: 'flex',
     flexDirection: 'column',
+    alignItems: 'flex-start',
+    justifyContent: 'space-between',
+  },
+  specialWrapper: {
+    display: 'flex',
+    alignSelf: 'stretch',
+    flexDirection: 'row',
     alignItems: 'flex-start',
     justifyContent: 'space-between',
   },
@@ -132,7 +140,10 @@ class MainPage extends PureComponent<Props> {
             </div>
             <div style={styles.subSectionWrapper}>
               <KillSumSection />
-              <AmountSection />
+              <div style={styles.specialWrapper}>
+                <AmountSection />
+                <SpecialSection />
+              </div>
             </div>
           </div>
           <div style={styles.sectionWrapper}>
