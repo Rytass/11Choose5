@@ -11,6 +11,7 @@ import { bindActionCreators } from 'redux';
 import initNumberPool from '../helper/init';
 import BaseSection from '../components/BaseSection';
 import TrashSection from '../components/TrashSection';
+import ZeroOneTwoSection from '../components/ZeroOneTwoSection';
 import ResultSection from '../components/ResultSection';
 import { MAIN_FORM } from '../shared/form';
 import { NO_RESULT } from '../shared/message';
@@ -101,6 +102,7 @@ class OtherPage extends PureComponent<Props> {
         <div style={styles.main}>
           <BaseSection />
           <TrashSection />
+          <ZeroOneTwoSection />
         </div>
         <ResultSection isRunning={!!runningOptions} />
       </form>
