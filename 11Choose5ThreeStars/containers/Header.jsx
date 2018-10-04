@@ -35,6 +35,13 @@ function Header() {
         to="/main">
         主要模式
       </NavLink>
+      <NavLink
+        className="hover-btn"
+        key="killKeepTwo"
+        style={styles.link}
+        to="/killKeepTwo">
+        杀/出二码/二码合跨
+      </NavLink>
     </nav>
   );
 }
