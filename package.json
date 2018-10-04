@@ -2,7 +2,7 @@
   "name": "11choose5",
   "version": "1.0.0",
   "description": "11choose5",
-  "main": "./11Choose5TwoStars/main.js",
+  "main": "./11Choose5ThreeStars/main.js",
   "scripts": {
     "build": "npm run build:11Choose5AnyFive && npm run build:11Choose5ThreeStars && npm run build:11Choose5TwoStars",
     "build:copyConfig:11Choose5AnyFive": "cp -r ./11Choose5AnyFive/static/* ./11Choose5AnyFive/dist && cp ./11Choose5AnyFive/production/* ./11Choose5AnyFive/dist",
