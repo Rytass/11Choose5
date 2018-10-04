@@ -17,14 +17,14 @@ const selector = formValueSelector(MAIN_FORM);
 
 const styles = {
   wrapper: {
-    height: 150,
+    // height: 150,
     display: 'flex',
     alignSelf: 'stretch',
     flexDirection: 'row',
     alignItems: 'flex-start',
     justifyContent: 'flex-start',
-    padding: '12px 8px',
-    margin: 4,
+    padding: 8,
+    margin: '4px 8px',
     border: '1px solid #4a4a4a',
   },
   title: {

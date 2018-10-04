@@ -18,14 +18,14 @@ const selector = formValueSelector(MAIN_FORM);
 
 const styles = {
   wrapper: {
-    height: 300,
+    flex: 1,
     display: 'flex',
     alignSelf: 'stretch',
     flexDirection: 'column',
     alignItems: 'flex-start',
     justifyContent: 'flex-start',
-    padding: '12px 8px',
-    margin: '4px 8px',
+    padding: 8,
+    margin: '0 8px',
     border: '1px solid #4a4a4a',
   },
   title: {
@@ -46,7 +46,7 @@ const styles = {
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    margin: '12px 0 0 0',
+    margin: '6px 0 0 0',
   },
   trashWrapper: {
     display: 'flex',

@@ -12,6 +12,7 @@ import initNumberPool from '../helper/init';
 import BaseSection from '../components/BaseSection';
 import TrashSection from '../components/TrashSection';
 import ZeroOneTwoSection from '../components/ZeroOneTwoSection';
+import TypeSection from '../components/TypeSection';
 import ResultSection from '../components/ResultSection';
 import { MAIN_FORM } from '../shared/form';
 import { NO_RESULT } from '../shared/message';
@@ -103,6 +104,7 @@ class OtherPage extends PureComponent<Props> {
           <BaseSection />
           <TrashSection />
           <ZeroOneTwoSection />
+          <TypeSection />
         </div>
         <ResultSection isRunning={!!runningOptions} />
       </form>
