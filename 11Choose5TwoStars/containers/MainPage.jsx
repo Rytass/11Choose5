@@ -14,6 +14,7 @@ import BileSetSection from '../components/BileSetSection';
 import AcrossTailAllSection from '../components/AcrossTailAllSection';
 import KillSumSection from '../components/KillSumSection';
 import ZeroOneTwoSection from '../components/ZeroOneTwoSection';
+import KillTypeSection from '../components/KillTypeSection';
 import SpecialSection from '../components/SpecialSection';
 import ResultSection from '../components/ResultSection';
 import BaseSection from '../components/BaseSection';
@@ -132,6 +133,7 @@ class MainPage extends PureComponent<Props> {
           <AcrossTailAllSection />
           <KillSumSection />
           <ZeroOneTwoSection />
+          <KillTypeSection />
           <SpecialSection />
         </div>
         <div style={styles.resultWrapper}>

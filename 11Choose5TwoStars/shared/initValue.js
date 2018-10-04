@@ -1,3 +1,5 @@
+import { BIG_DEFINITONS_SEVEN_ELEVEN } from './bigDefinition';
+
 export const INIT_FORM_VALUE = {
   resultNumber: [],
   failFrom: 0,
@@ -86,6 +88,19 @@ export const INIT_FORM_VALUE = {
   TZ: false,
   TO: false,
   TT: false,
+  bigDefinition: BIG_DEFINITONS_SEVEN_ELEVEN,
+  bb: false,
+  bs: false,
+  ss: false,
+  sb: false,
+  oo: false,
+  oe: false,
+  eo: false,
+  ee: false,
+  pp: false,
+  pc: false,
+  cp: false,
+  cc: false,
   noContinuous: false,
   isContinuous: false,
   uphill: false,

@@ -187,8 +187,6 @@ class KillSumSection extends PureComponent<Props> {
             text="12"
             buttonstyle={styles.button}
             component={BooleanButton} />
-        </div>
-        <div style={styles.lineWrapper}>
           <Field
             name="killSumThirteen"
             text="13"
@@ -214,6 +212,8 @@ class KillSumSection extends PureComponent<Props> {
             text="17"
             buttonstyle={styles.button}
             component={BooleanButton} />
+        </div>
+        <div style={styles.lineWrapper}>
           <Field
             name="killSumEighteen"
             text="18"
