@@ -77,6 +77,19 @@ export const INIT_FORM_VALUE = {
   killSumNineteen: false,
   killSumTwenty: false,
   killSumTwentyOne: false,
+  ZZ: false,
+  ZO: false,
+  ZT: false,
+  OZ: false,
+  OO: false,
+  OT: false,
+  TZ: false,
+  TO: false,
+  TT: false,
+  noContinuous: false,
+  isContinuous: false,
+  uphill: false,
+  downhill: false,
 };
 
 export default {
