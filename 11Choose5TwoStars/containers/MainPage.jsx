@@ -10,6 +10,8 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import initNumberPool from '../helper/init';
 import ResultSection from '../components/ResultSection';
+import BaseSection from '../components/BaseSection';
+import KillChooseSection from '../components/KillChooseSection';
 import { INIT_FORM_VALUE } from '../shared/initValue';
 import { MAIN_FORM } from '../shared/form';
 import { NO_RESULT } from '../shared/message';
@@ -35,6 +37,13 @@ const styles = {
     flexDirection: 'column',
     alignItems: 'flex-start',
     justifyContent: 'space-between',
+  },
+  resultWrapper: {
+    height: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'flex-start',
   },
   sectionWrapper: {
     alignSelf: 'stretch',
@@ -131,7 +140,11 @@ class MainPage extends PureComponent<Props> {
             </div>
           </div>
         </div> */}
-        <ResultSection isRunning={!!runningOptions} />
+        <div style={styles.resultWrapper}>
+          <KillChooseSection />
+          <BaseSection />
+          <ResultSection isRunning={!!runningOptions} />
+        </div>
       </form>
     );
   }

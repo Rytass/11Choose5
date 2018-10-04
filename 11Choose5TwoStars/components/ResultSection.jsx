@@ -14,24 +14,27 @@ import {
 import { transNumber } from '../helper/operator';
 import ResultArea from './ResultArea';
 import NumberTextInput from './Form/NumberTextInput';
-import { INIT_FORM_VALUE } from '../shared/initValue';
 import { NO_RESULT } from '../shared/message.js';
+import { INIT_FORM_VALUE } from '../shared/initValue';
 import { MAIN_FORM } from '../shared/form';
 
 const selector = formValueSelector(MAIN_FORM);
 
 const styles = {
   wrapper: {
-    width: 250,
+    width: 200,
     height: '100%',
     display: 'flex',
     alignSelf: 'stretch',
+    flex: 3,
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'flex-start',
     padding: '10px 16px',
-    margin: '4px 8px 0 8px',
-    border: '1px solid #4a4a4a',
+    margin: '0 8px 0 8px',
+    borderWidth: '0 1px 1px 1px',
+    borderColor: '#4a4a4a',
+    borderStyle: 'solid',
   },
   failWrapper: {
     display: 'flex',
@@ -49,6 +52,7 @@ const styles = {
   buttonWrapper: {
     display: 'flex',
     flexDirection: 'column',
+    flex: 1,
     width: '100%',
     padding: '0 6px',
     alignItems: 'center',
@@ -66,7 +70,6 @@ const styles = {
     color: '#4a4a4a',
     border: '1px solid #4a4a4a',
     margin: '2px 0',
-    padding: '6px 0',
     textDecoration: 'none',
     ':hover': {
       opacity: 0.8,
@@ -88,7 +91,6 @@ const styles = {
     color: '#4a4a4a',
     border: '1px solid #4a4a4a',
     margin: '2px 0',
-    padding: '6px 0',
     textDecoration: 'none',
     ':hover': {
       opacity: 0.8,
@@ -110,7 +112,6 @@ const styles = {
     color: '#4a4a4a',
     border: '1px solid #4a4a4a',
     margin: '2px 0',
-    padding: '6px 0',
     textDecoration: 'none',
     ':hover': {
       opacity: 0.8,
