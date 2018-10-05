@@ -2,6 +2,10 @@ import { baseKiller } from '../helper/baseKiller';
 import { chooseKiller } from '../helper/chooseKiller';
 import { acrossKiller } from '../helper/acrossKiller';
 import { allKiller } from '../helper/allKiller';
+import {
+  bigNumberKeeper,
+  oddNumberKeeper,
+} from '../helper/amountKeeper';
 import { sumKiller } from '../helper/sumKiller';
 import { positionKiller } from '../helper/positionKiller';
 import { bileKiller } from '../helper/bileKiller';
@@ -14,6 +18,8 @@ export const FILTER_ACTIONS = [
   chooseKiller,
   acrossKiller,
   allKiller,
+  bigNumberKeeper,
+  oddNumberKeeper,
   sumKiller,
   positionKiller,
   bileKiller,
