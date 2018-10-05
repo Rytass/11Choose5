@@ -6,6 +6,10 @@ import {
   bigNumberKeeper,
   oddNumberKeeper,
 } from '../helper/amountKeeper';
+import {
+  hillKiller,
+  continuousKiller,
+} from '../helper/specialKiller';
 import { sumKiller } from '../helper/sumKiller';
 import { positionKiller } from '../helper/positionKiller';
 import { bileKiller } from '../helper/bileKiller';
@@ -20,6 +24,8 @@ export const FILTER_ACTIONS = [
   allKiller,
   bigNumberKeeper,
   oddNumberKeeper,
+  hillKiller,
+  continuousKiller,
   sumKiller,
   positionKiller,
   bileKiller,
