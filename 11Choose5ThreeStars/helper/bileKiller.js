@@ -11,16 +11,12 @@ function parseBileSet(numbers, set, bileNumbers) {
     const firstIndex = set.findIndex(bile => bile === parseNumber(num.num[0]));
     const secondIndex = set.findIndex(bile => bile === parseNumber(num.num[1]));
     const thirdIndex = set.findIndex(bile => bile === parseNumber(num.num[2]));
-    const fourthIndex = set.findIndex(bile => bile === parseNumber(num.num[3]));
-    const fifthIndex = set.findIndex(bile => bile === parseNumber(num.num[4]));
 
     if (bileNumbers.find(bileNumber => bileNumber)) {
       const bileLength = uniq([
         firstIndex,
         secondIndex,
         thirdIndex,
-        fourthIndex,
-        fifthIndex,
       ].filter(index => index >= 0)).length;
 
       return (
@@ -28,12 +24,10 @@ function parseBileSet(numbers, set, bileNumbers) {
         || (bileNumbers[1] ? bileLength === 1 : false)
         || (bileNumbers[2] ? bileLength === 2 : false)
         || (bileNumbers[3] ? bileLength === 3 : false)
-        || (bileNumbers[4] ? bileLength === 4 : false)
-        || (bileNumbers[5] ? bileLength === 5 : false)
       );
     }
 
-    return ~firstIndex || ~secondIndex || ~thirdIndex || ~fourthIndex || ~fifthIndex;
+    return ~firstIndex || ~secondIndex || ~thirdIndex;
   });
 
   return result;
@@ -47,8 +41,6 @@ function getBileNumbers(condition, options) {
         options.oneOfbileSet1,
         options.twoOfbileSet1,
         options.threeOfbileSet1,
-        options.fourOfbileSet1,
-        options.fiveOfbileSet1,
       ];
 
     case 'bileSet2':
@@ -57,8 +49,6 @@ function getBileNumbers(condition, options) {
         options.oneOfbileSet2,
         options.twoOfbileSet2,
         options.threeOfbileSet2,
-        options.fourOfbileSet2,
-        options.fiveOfbileSet2,
       ];
 
     case 'bileSet3':
@@ -67,8 +57,6 @@ function getBileNumbers(condition, options) {
         options.oneOfbileSet3,
         options.twoOfbileSet3,
         options.threeOfbileSet3,
-        options.fourOfbileSet3,
-        options.fiveOfbileSet3,
       ];
 
     case 'bileSet4':
@@ -77,18 +65,6 @@ function getBileNumbers(condition, options) {
         options.oneOfbileSet4,
         options.twoOfbileSet4,
         options.threeOfbileSet4,
-        options.fourOfbileSet4,
-        options.fiveOfbileSet4,
-      ];
-
-    case 'bileSet5':
-      return [
-        options.zeroOfbileSet5,
-        options.oneOfbileSet5,
-        options.twoOfbileSet5,
-        options.threeOfbileSet5,
-        options.fourOfbileSet5,
-        options.fiveOfbileSet5,
       ];
 
     default:
@@ -98,7 +74,7 @@ function getBileNumbers(condition, options) {
 
 export function bileKiller(numbers, options) {
   const composed = Object.entries(options)
-    .filter(entry => entry[0].match(/bileSet[12345]/) && entry[1].length)
+    .filter(entry => entry[0].match(/bileSet[1234]/) && entry[1].length)
     .map(([condition, value]) => {
       const bileNumbers = getBileNumbers(condition, options);
 
@@ -116,7 +92,6 @@ export function bileKiller(numbers, options) {
       && !options.bileFaultTwo
       && !options.bileFaultThree
       && !options.bileFaultFour
-      && !options.bileFaultFive
     ) {
       if (!num.isBilePass(0)) {
         num.killFailed();
@@ -132,7 +107,6 @@ export function bileKiller(numbers, options) {
         || (options.bileFaultTwo ? num.isBilePass(2) : false)
         || (options.bileFaultThree ? num.isBilePass(3) : false)
         || (options.bileFaultFour ? num.isBilePass(4) : false)
-        || (options.bileFaultFive ? num.isBilePass(5) : false)
       )
     ) {
       num.killFailed();
