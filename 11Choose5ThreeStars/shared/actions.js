@@ -22,6 +22,14 @@ import {
   twoAcrossKeeper,
   twoFitKeeper,
 } from '../helper/acrossFitKeeper';
+import {
+  bigTypeKeeper,
+  oddTypeKeeper,
+  primeTypeKeeper,
+  zeroLoadTypeKeeper,
+  oneLoadTypeKeeper,
+  twoLoadTypeKeeper,
+} from '../helper/typeKeeper';
 
 export const FILTER_ACTIONS = [
   baseKiller,
@@ -42,6 +50,12 @@ export const FILTER_ACTIONS = [
   twoSetKeeper,
   twoAcrossKeeper,
   twoFitKeeper,
+  bigTypeKeeper,
+  oddTypeKeeper,
+  primeTypeKeeper,
+  zeroLoadTypeKeeper,
+  oneLoadTypeKeeper,
+  twoLoadTypeKeeper,
 ];
 
 export default {
