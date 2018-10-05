@@ -6,7 +6,7 @@ import { acrossKiller } from '../helper/acrossKiller';
 import { tailKiller } from '../helper/tailKiller';
 import { sumKiller } from '../helper/sumKiller';
 import { zeroOneTwoKiller } from '../helper/zeroOneTwoKiller';
-// import { bigSmallKiller } from '../helper/bigSmallKiller';
+import { bigSmallKiller } from '../helper/bigSmallKiller';
 import { oddEvenKiller } from '../helper/oddEvenKiller';
 import { primeCompositeKiller } from '../helper/primeCompositeKiller';
 import {
@@ -23,7 +23,7 @@ export const FILTER_ACTIONS = [
   tailKiller,
   sumKiller,
   zeroOneTwoKiller,
-  // bigSmallKiller,
+  bigSmallKiller,
   oddEvenKiller,
   primeCompositeKiller,
   hillKiller,
