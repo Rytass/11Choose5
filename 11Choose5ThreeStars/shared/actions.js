@@ -22,6 +22,7 @@ import {
   twoAcrossKeeper,
   twoFitKeeper,
 } from '../helper/acrossFitKeeper';
+import { zeroOneTwoKiller } from '../helper/zeroOneTwoKiller';
 import {
   bigTypeKeeper,
   oddTypeKeeper,
@@ -50,6 +51,7 @@ export const FILTER_ACTIONS = [
   twoSetKeeper,
   twoAcrossKeeper,
   twoFitKeeper,
+  zeroOneTwoKiller,
   bigTypeKeeper,
   oddTypeKeeper,
   primeTypeKeeper,
