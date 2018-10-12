@@ -12,6 +12,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { MAIN_FORM } from '../shared/form';
 import TextArea from './Form/TextArea.jsx';
+import { transOrigin } from '../helper/operator.js';
 
 const selector = formValueSelector(MAIN_FORM);
 
@@ -118,7 +119,7 @@ class BaseSection extends PureComponent<Props> {
 
 const reduxHook = connect(
   state => ({
-    baseLength: selector(state, 'base').split(/[\n(\r\n)]/).filter(t => t).length,
+    baseLength: selector(state, 'base').split(/[\n(\r\n)]/).filter(t => transOrigin(t).length === 5).length,
   }),
   dispatch => bindActionCreators({
     changeField: value => change(MAIN_FORM, 'base', value),

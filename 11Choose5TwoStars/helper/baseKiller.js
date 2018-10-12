@@ -4,7 +4,9 @@ import { transOrigin } from './operator';
 export function baseKiller(numbers, options) {
   if (!options.base) return numbers;
 
-  return options.base.split(/[\n(\r\n)]/).map((num) => {
+  const usefulBase = options.base.split(/[\n(\r\n)]/).filter(t => transOrigin(t).length === 2);
+
+  return usefulBase.map((num) => {
     const originNum = transOrigin(num);
 
     return new NumberCandidate(originNum);

@@ -5,7 +5,9 @@ import NumberCandidate from '../shared/NumberCandidate.js';
 export function chooseKiller(numbers, options) {
   if (!options.killChoose) return numbers;
 
-  const targetChoose = options.killChoose.split(/[\n(\r\n)]/).map((num) => {
+  const usefulChoose = options.killChoose.split(/[\n(\r\n)]/).filter(t => transOrigin(t).length === 2);
+
+  const targetChoose = usefulChoose.map((num) => {
     const originNum = transOrigin(num);
 
     return new NumberCandidate(originNum);
