@@ -11,6 +11,7 @@ import {
   change,
   formValueSelector,
 } from 'redux-form';
+import * as AlertActions from '../actions/Alert.js';
 import { transNumber } from '../helper/operator';
 import ResultArea from './ResultArea';
 import NumberTextInput from './Form/NumberTextInput';
@@ -128,12 +129,14 @@ type Props = {
     num: number,
   }>,
   isRunning: boolean,
+  showAlert: Function,
 }
 
 class ResultSection extends PureComponent<Props> {
   copy() {
     const {
       resultNumber,
+      showAlert,
     } = this.props;
 
     if (!resultNumber.length || resultNumber[0] === NO_RESULT) {
@@ -142,7 +145,7 @@ class ResultSection extends PureComponent<Props> {
     }
 
     clipboard.writeText(resultNumber.map(num => transNumber(num.num)).join('\n'));
-    alert('号码已复制');
+    showAlert(true);
   }
 
   render() {
@@ -199,6 +202,7 @@ const reduxHook = connect(
   dispatch => bindActionCreators({
     changeResultNumber: value => change(MAIN_FORM, 'resultNumber', value),
     clearForm: () => initialize(MAIN_FORM, INIT_FORM_VALUE),
+    ...AlertActions,
   }, dispatch),
 );
 
