@@ -8,6 +8,7 @@ import {
   Route,
 } from 'react-router-dom';
 import { Provider } from 'react-redux';
+import Alert from './containers/Alert';
 import MainBoard from './containers/MainBoard';
 
 function App({
@@ -17,6 +18,7 @@ function App({
     <Provider store={store}>
       <MemoryRouter>
         <Fragment>
+          <Alert />
           <Switch>
             <Route path="/" component={MainBoard} />
           </Switch>
