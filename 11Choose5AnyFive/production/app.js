@@ -8,6 +8,7 @@ const {
 } = require('electron');
 const path = require('path');
 const url = require('url');
+const fs = require('fs');
 
 let mainWindow;
 
@@ -15,6 +16,7 @@ app.on('ready', () => {
   const config = {
     width: 1280,
     height: 750,
+    icon: fs.readFileSync(path.resolve(__dirname, './icon.png')),
   };
 
   mainWindow = new BrowserWindow(config);
